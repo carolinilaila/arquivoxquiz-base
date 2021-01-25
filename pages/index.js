@@ -5,6 +5,8 @@ import QuizLogo from '../src/components/QuizLogo'
 import QuizBackground from '../src/components/QuizBackground'
 import Footer from '../src/components/Footer'
 import GitHubCorner from '../src/components/GitHubCorner'
+import Head from 'next/head'
+import Link from 'next/link'
 
 export const QuizContainer = styled.div`
   width: 100%;
@@ -17,9 +19,20 @@ export const QuizContainer = styled.div`
   }
 `;
 
+const StyleLink = {
+  textDecoration: 'none',
+  color: 'gray',
+};
+
 export default function Home() {
   return (
     <QuizBackground backgroundImage={db.bg}>
+      <Head>
+        <title>Quiz Arquivo X</title>
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta property="og:title" content="Quiz Arquivo X" key="title" />
+      </Head>
       <QuizContainer>
         <QuizLogo />
         <Widget>
@@ -35,7 +48,10 @@ export default function Home() {
           <Widget.Content>
             <h1>Quizes da Galera</h1>
 
-            <p>lorem ipsum dolor sit amet...</p>
+            <p>Aguarde...</p>
+            <Link href="/quiz">
+              <a style={StyleLink}>Ir para Quiz</a>
+            </Link>
           </Widget.Content>
         </Widget>
         <Footer />
