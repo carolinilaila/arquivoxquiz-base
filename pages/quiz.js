@@ -34,6 +34,7 @@ export default function Quiz() {
             <meta name="viewport" content="initial-scale=1.0, width=device-width" />
             <meta property="og:title" content="Quiz Arquivo X" key="title" />
             <meta property="og:image" content={db.bg}/>
+            <meta property="og:image:type" content="image/jpg"/>
         </Head>
         <QuizContainer>
             <QuizLogo />
